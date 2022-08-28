@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body>
+
+  <!-- Navbar goes here -->
+  <nav class="bg-white shadow-lg">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex justify-between">
+        <div class="flex space-x-1">
+          <div>
+            <!-- Website Logo -->
+            <a href="#" class="flex items-center py-4 px-2">
+              <img src="img/1_1-removebg-preview.png" alt="Logo" class="h-10 w-10 mr-5">
+            </a>
+          </div>
+          <!-- Primary Navbar items -->
+        </div>
+        <div class="hidden md:flex items-center space-x-3 ">
+          <a href="index.html" class="py-2 px-2 text-pink-500 font-semibold ">Home</a>
+          <a href="index2.html"
+            class="py-2 px-2 text-gray-500 font-semibold hover:text-pink-500 transition duration-300">katalog</a>
+          <a href="index3.html"
+            class="py-2 px-2 text-gray-500 font-semibold hover:text-pink-500 transition duration-300">Album</a>
+          <a href="index4.html"
+            class="py-2 px-2 text-gray-500 font-semibold hover:text-pink-500 transition duration-300">Our
+            Story</a>
+          <a href="login.html"
+            class="py-2 px-2 text-gray-500 font-semibold hover:text-pink-500 transition duration-300">
+            Log-in</a>
+
+        </div>
+        <!-- Mobile menu button -->
+        <div class="md:hidden flex items-center">
+          <button class="outline-none mobile-menu-button">
+            <svg class=" w-6 h-6 text-gray-500 hover:text-pink-500 " x-show="!showMenu" fill="none"
+              stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- mobile menu -->
+    <div class="hidden mobile-menu">
+      <ul class="ac">
+        <li><a href="index.html" class="block text-sm px-2 py-4 hover:bg-pink-500 transition duration-300">Home</a>
+        </li>
+        <li><a href="index2.html" class="block text-sm px-2 py-4 hover:bg-pink-500 transition duration-300">Katalog</a>
+        </li>
+        <li><a href="index3.html" class="block text-sm px-2 py-4 hover:bg-pink-500 transition duration-300">Album</a></li>
+        <li><a href="index4.html" class="block text-sm px-2 py-4 hover:bg-pink-500 transition duration-300">Our Story</a>
+        </li>
+        <a href="login.html" class="block text-sm py-4 px-2 font-semibold hover:bg-pink-500 transition duration-300">
+          Log-in</a>
+
+      </ul>
+    </div>
+    <script>
+      const btn = document.querySelector("button.mobile-menu-button");
+      const menu = document.querySelector(".mobile-menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+  </nav>
+
+  <header class="my-0">
+    <div class="w-full bg-center bg-cover" style="background-image: url(img/banner.png);">
+      <div class="flex items-center justify-center w-full h-full bg-gray-900 bg-opacity-10 py-12">
+        <div class="text-center">
+          <div class="container px-4 mx-auto">
+            <div class="max-w-4xl mx-auto text-center">
+              <h2 class="mt-8 mb-6 text-4xl lg:text-5xl font-bold text-gray-100">WELCOME TO ALBUM DIGITAL</h2>
+              <p class="max-w-3xl mx-auto mb-10 text-lg text-gray-300">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum sit cum iure qui, nostrum at sapiente
+                ducimus.
+              </p>
+              <button type="button"
+                class="inline-block  px-6 py-2.5 border-2 border-white text-white font-medium text-xs rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition ease-in-out"
+                data-mdb-ripple="true" data-mdb-ripple-color="light">
+                Let's Start
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="my-2">
+    <div class="w-full bg-center bg-cover" style="background-image: url(img/review.png);">
+      <div class="flex items-center justify-center w-full h-full bg-gray-900 bg-opacity-10 py-12">
+        <div class="text-center">
+          <div class="container px-4 mx-auto">
+            <div class="max-w-4xl mx-auto text-center">
+              <h2 class="mt-8 mb-6 text-4xl lg:text-2xl font-bold text-orange-900">KATALOG ALBUM TERBAIK</h2>
+              <p class="max-w-3xl mx-auto mb-10 text-lg text-orange-800">
+                Temukan katalog album favoritmu dengan harga terjangkau
+              </p>
+              <div class="flex w-10/12 mx-auto justify-center p-15 pr-90 text-center columns-9">
+
+
+
+                <div class=" max-w-sm px-6">
+                  <img class="rounded-t-xl " src="img/Rectangle 15.png" alt="">
+                  <div class="p-6 text-center">
+                    <button type="button"
+                      class="inline-block px-6 py-2.5 bg-slate-400 text-white font-medium text-xsleading-tight rounded shadow-md hover:shadow-lg">Demo</button>
+                  </div>
+
+
+                </div>
+                <div class=" max-w-sm px-6">
+                  <img class="rounded-t-xl " src="img/Rectangle 16.png" alt="">
+                  <div class="p-6 text-center">
+                    <button type="button"
+                      class="inline-block px-6 py-2.5 bg-slate-400 text-white font-medium text-xsleading-tight rounded shadow-md hover:shadow-lg">
+                      Demo</button>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+
+
+  <h2 class="text-center text-4xl text-bold mx-7 p-5">PAKET HARGA <span class="text-pink-900 text-bold"> ALBUM DIGITAL
+    </span>
+    ONLINE </h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-x-10 xl-grid-cols-3 gap-y-10 gap-x-6">
+    <!--Card 1-->
+    <div class="max-w-sm  rounded overflow-hidden shadow-lg">
+      <p class="bg-slate-500 py-9 text-white px-0 text-center">BASIC
+      </p>
+      <div class="px-6 text-center py-4">
+        <div class="font-bold text-xl mb-2">Rp. 50.000</div>
+        <h1 class="py-4">. Album photo simple</h1>
+        <h1 class="py-4">. Tampilan responsive</h1>
+        <h1 class="py-4">. Maksimal 100 foto</h1>
+        <h1 class="py-4">. Tampilan awal standar</h1>
+
+        <div class="p-6">
+          <button type="button"
+            class="inline-block px-6 py-2.5 bg-slate-400 text-white font-medium text-xsleading-tight rounded shadow-md hover:shadow-lg">ORDER
+            NOW</button>
+        </div>
+
+        </p>
+      </div>
+    </div>
+
+    <div class="max-w-sm rounded overflow-hidden shadow-lg">
+      <p class="bg-slate-500 py-9 text-white px-10 text-center">BASIC
+      </p>
+      <div class="px-6 text-center py-4">
+        <div class="font-bold text-xl mb-2">Rp. 50.000</div>
+        <h1 class="py-4">. Album photo simple</h1>
+        <h1 class="py-4">. Tampilan responsive</h1>
+        <h1 class="py-4">. Maksimal 100 foto</h1>
+        <h1 class="py-4">. Tampilan awal standar</h1>
+
+        <div class="p-6">
+          <button type="button"
+            class="inline-block px-6 py-2.5 bg-slate-400 text-white font-medium text-xsleading-tight rounded shadow-md hover:shadow-lg">ORDER
+            NOW</button>
+        </div>
+
+        </p>
+      </div>
+    </div>
+    <div class="max-w-sm rounded overflow-hidden shadow-lg">
+      <p class="bg-slate-500 py-9 text-white px-10 text-center">BASIC
+      </p>
+      <div class="px-6 text-center py-4">
+        <div class="font-bold text-xl mb-2">Rp. 50.000</div>
+        <h1 class="py-4">. Album photo simple</h1>
+        <h1 class="py-4">. Tampilan responsive</h1>
+        <h1 class="py-4">. Maksimal 100 foto</h1>
+        <h1 class="py-4">. Tampilan awal standar</h1>
+
+        <div class="p-6">
+          <button type="button"
+            class="inline-block px-6 py-2.5 bg-slate-400 text-white font-medium text-xsleading-tight rounded shadow-md hover:shadow-lg">ORDER
+            NOW</button>
+        </div>
+
+        </p>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+  </div>
+
+  <!-- component -->
+  <section class="my-2">
+    <div class="w-full bg-cover" style="background-image: url(img/review.png);">
+      <h5 class="text-center text-2xl text-bold py-10 text-orange-800">ALUR PEMESANAN ALBUM DIGITAL</h5>
+  </section>
+
+  <div class="container">
+    <div class="flex flex-col md:grid grid-cols-9 mx-auto p-2 text-blue-50">
+      <!-- left -->
+      <div class="flex flex-row-reverse md:contents">
+        <div class="bg-gray-500 col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md">
+          <h3 class="font-semibold text-lg mb-1">Pilih katalog Album</h3>
+          <p class="leading-tight text-justify">
+            PiliH grid foto dan video sesuai dengan kebutuhan anda
+          </p>
+        </div>
+        <div class="col-start-5 col-end-6 md:mx-auto relative mr-10">
+          <div class="h-full w-6 flex items-center justify-center">
+            <div class="h-full w-1 bg-gray-800 pointer-events-none"></div>
+          </div>
+          <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-gray-500 shadow"></div>
+        </div>
+      </div>
+      <!-- right -->
+      <div class="flex md:contents">
+        <div class="col-start-5 col-end-6 mr-10 md:mx-auto relative">
+          <div class="h-full w-6 flex items-center justify-center">
+            <div class="h-full w-1 bg-gray-800 pointer-events-none"></div>
+          </div>
+          <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-gray-500 shadow"></div>
+        </div>
+        <div class="bg-gray-500 col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md">
+          <h3 class="font-semibold text-lg mb-1">Pesan & isi Formulir</h3>
+          <p class="leading-tight text-justify">
+            Klik pesan dan isi beberapa formulir untuk order album digital
+          </p>
+        </div>
+      </div>
+
+
+      <!-- left -->
+      <div class="flex flex-row-reverse justify-center md:contents">
+        <div class="bg-gray-500 col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md">
+          <h3 class="font-semibold  text-lg mb-1">Pembayaran</h3>
+          <p class="leading-tight text-justify">
+            Pembayaran bisa dilakukan melalui transfer Bank, Dana dan Ovo
+          </p>
+        </div>
+        <div class="col-start-5 col-end-6 md:mx-auto relative mr-10">
+          <div class="h-full w-6 flex items-center justify-center">
+            <div class="h-full w-1 bg-gray-800 pointer-events-none"></div>
+          </div>
+          <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-gray-500 shadow"></div>
+        </div>
+      </div>
+      <!-- right -->
+      <div class="flex md:contents">
+        <div class="col-start-5 col-end-6 mr-10 md:mx-auto relative">
+          <div class="h-full w-6 flex items-center justify-center">
+            <div class="h-full w-1 bg-gray-800 pointer-events-none"></div>
+          </div>
+          <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-gray-500 shadow"></div>
+        </div>
+        <div class="bg-gray-500 col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md">
+          <h3 class="font-semibold text-lg mb-1">Pesanan diproses</h3>
+          <p class="leading-tight text-justify">
+            Tunggu 24 jam album digital akan diproses oleh tim kami
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class=" justify-center ">
+    <div class=" mx-auto ">
+      <div class="w-full bg-cover py-4 px-2" style="background-image: url(img/footer.png);">
+        <div class="sm:flex sm:items-center sm:justify-between px-20">
+          <a href="#" target="_blank" class="flex items-center mb-4 sm:mb-0">
+            <img src="img/1_1-removebg-preview.png" class=" h-18" alt="Flowbite Logo" />
+          </a>
+          <ul class="flex flex-wrap items-center mb-6 sm:mb-0">
+            <li>
+              <div class="px-2 pr-7">
+                <span class="inline-block px-2 py-1 text-sm font-semibold text-gray-700 mr-2 mb-1">
+                  <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                      d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" />
+                  </svg> </span>
+                <span class="inline-block px-2 py-1 text-sm font-semibold text-gray-700 mr-2 mb-1">
+                  <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                      d="M20,15.5C18.8,15.5 17.5,15.3 16.4,14.9C16.3,14.9 16.2,14.9 16.1,14.9C15.8,14.9 15.6,15 15.4,15.2L13.2,17.4C10.4,15.9 8,13.6 6.6,10.8L8.8,8.6C9.1,8.3 9.2,7.9 9,7.6C8.7,6.5 8.5,5.2 8.5,4C8.5,3.5 8,3 7.5,3H4C3.5,3 3,3.5 3,4C3,13.4 10.6,21 20,21C20.5,21 21,20.5 21,20V16.5C21,16 20.5,15.5 20,15.5M5,5H6.5C6.6,5.9 6.8,6.8 7,7.6L5.8,8.8C5.4,7.6 5.1,6.3 5,5M19,19C17.7,18.9 16.4,18.6 15.2,18.2L16.4,17C17.2,17.2 18.1,17.4 19,17.4V19Z" />
+                  </svg>
+                </span>
+                <span class="inline-block px-2 py-1 text-sm font-semibold text-gray-700 mr-2 mb-1 ">
+                  <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                      d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z" />
+                  </svg>
+                </span>
+              </div>
+          </li>
+            <li>
+              <a href="#" class="mr-4 text-sm text-white-500 hover:underline md:mr-6 dark:text-white-400">
+                <img src="img/Line 3.png"  alt="">
+              </a>
+            </li>
+            <li>
+              <a href="#" class="mr-4 text-sm hover:underline md:mr-6 text-white">
+                <p>ndcknscna, c,az adl </p>
+                <p>dlancladncladnlc</p>
+                Licensing</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+  </section>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
