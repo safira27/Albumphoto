@@ -2,229 +2,123 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
 
 <body>
-  <nav class="bg-white shadow-lg">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="flex justify-between">
-        <div class="flex space-x-1">
+<div class="min-h-screen bg-gray-100" type="" onclick="toggleModal('modal-id')">
+    <div class="sidebar min-h-screen w-[3.35rem] overflow-hidden border-r hover:w-56 hover:bg-white hover:shadow-lg">
+        <div class="flex h-screen flex-col justify-between pt-2 pb-6">
           <div>
-            <!-- Website Logo -->
-            <a href="#" class="flex items-center py-4 px-2">
-              <img src="img/1_1-removebg-preview.png" alt="Logo" class="h-10 w-10 mr-5">
+            <div class="w-max p-2.5">
+              <img src="https://tailus.io/images/logo.svg" class="w-32" alt="">
+            </div>
+            <ul class="mt-6 space-y-2 tracking-wide">
+              <li class="min-w-max">
+                <a href="#" aria-label="dashboard" class="relative flex items-center space-x-4 bg-gradient-to-r from-sky-600 to-cyan-400 px-4 py-3 text-white">
+                  <svg class="-ml-1 h-6 w-6" viewBox="0 0 24 24" fill="none">
+                    <path d="M6 8a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V8ZM6 15a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-1Z" class="fill-current text-cyan-400 dark:fill-slate-600"></path>
+                    <path d="M13 8a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2V8Z" class="fill-current text-cyan-200 group-hover:text-cyan-300"></path>
+                    <path d="M13 15a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-1Z" class="fill-current group-hover:text-sky-300"></path>
+                  </svg>
+                  <span class="-mr-1 font-medium " data-modal-toggle="defaultModal">Component</span>
+                </a>
+              </li>
+              <li class="min-w-max">
+                <a href="#" class="bg group flex items-center space-x-4 rounded-full px-4 py-3 text-gray-600">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path class="fill-current text-gray-300 group-hover:text-cyan-300" fill-rule="evenodd" d="M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z" clip-rule="evenodd" />
+                    <path class="fill-current text-gray-600 group-hover:text-cyan-600" d="M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z" />
+                  </svg>
+                  <span class="group-hover:text-gray-700">Categories</span>
+                </a>
+              </li>
+              <li class="min-w-max">
+                <a href="#" class="group flex items-center space-x-4 rounded-md px-4 py-3 text-gray-600">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path class="fill-current text-gray-600 group-hover:text-cyan-600" fill-rule="evenodd" d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z" clip-rule="evenodd" />
+                    <path class="fill-current text-gray-300 group-hover:text-cyan-300" d="M15 7h1a2 2 0 012 2v5.5a1.5 1.5 0 01-3 0V7z" />
+                  </svg>
+                  <span class="group-hover:text-gray-700">Reports</span>
+                </a>
+              </li>
+              <li class="min-w-max">
+                <a href="#" class="group flex items-center space-x-4 rounded-md px-4 py-3 text-gray-600">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path class="fill-current text-gray-600 group-hover:text-cyan-600" d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z" />
+                    <path class="fill-current text-gray-300 group-hover:text-cyan-300" d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z" />
+                  </svg>
+                  <span class="group-hover:text-gray-700">Other data</span>
+                </a>
+              </li>
+              <li class="min-w-max">
+                <a href="#" class="group flex items-center space-x-4 rounded-md px-4 py-3 text-gray-600">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path class="fill-current text-gray-300 group-hover:text-cyan-300" d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z" />
+                    <path class="fill-current text-gray-600 group-hover:text-cyan-600" fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="group-hover:text-gray-700">Finance</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="w-max -mb-3">
+            <a href="index.html" class="group flex items-center space-x-4 rounded-md px-4 py-3 text-gray-600">
+              <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M12.08,4.08L20,12L12.08,19.92L10.67,18.5L16.17,13H2V11H16.17L10.67,5.5L12.08,4.08M20,12V22H22V2H20V12Z" />
+            </svg>              
+            <span class="group-hover:text-gray-700">Back</span>
             </a>
           </div>
-          <!-- Primary Navbar items -->
         </div>
-        <div class="hidden md:flex items-center space-x-3 ">
-          <a href="index.html" class="py-2 px-2 text-pink-500 font-semibold ">Home</a>
-          <a href="index2.html"
-            class="py-2 px-2 text-gray-500 font-semibold hover:text-pink-500 transition duration-300">katalog</a>
-          <a href="index3.html"
-            class="py-2 px-2 text-gray-500 font-semibold hover:text-pink-500 transition duration-300">Album</a>
-          <a href="index4.html"
-            class="py-2 px-2 text-gray-500 font-semibold hover:text-pink-500 transition duration-300">Our
-            Story</a>
-          <a href="login.html"
-            class="py-2 px-2 text-gray-500 font-semibold hover:text-pink-500 transition duration-300">
-            Log-in</a>
+        
+      </div>
+</div>
+  <div class="hidden overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center" id="modal-id">
+    <div class="relative w-auto my-6 mx-auto max-w-3xl">
+      <div class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+        <div class="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
+          <h3 class="text-3xl font-semibold">
+            Navbar
+          </h3>
+          <button class="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none" onclick="toggleModal('modal-id')">
+            <span class="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
+              ×
+            </span>
+          </button>
+        </div>
+        <div class="relative p-6 flex-auto">
+          <img src="build/Group 17 (1).png" class="my-4 text-slate-500 text-lg leading-relaxed">
+          <img src="build/Group 17 (1).png" class="my-4 text-slate-500 text-lg leading-relaxed">
 
+        
         </div>
-        <!-- Mobile menu button -->
-        <div class="md:hidden flex items-center">
-          <button class="outline-none mobile-menu-button">
-            <svg class=" w-6 h-6 text-gray-500 hover:text-pink-500 " x-show="!showMenu" fill="none"
-              stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
-              <path d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
+
+        <div class="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
+          <button class="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button" onclick="toggleModal('modal-id')">
+            Close
+          </button>
+          <button class="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button" onclick="toggleModal('modal-id')">
+            Save Changes
           </button>
         </div>
       </div>
     </div>
-    <!-- mobile menu -->
-    <div class="hidden mobile-menu">
-      <ul class="">
-        <li><a href="index.html" class="block text-sm px-2 py-4 hover:bg-pink-500 transition duration-300">Home</a>
-        </li>
-        <li><a href="index2.html" class="block text-sm px-2 py-4 hover:bg-pink-500 transition duration-300">Katalog</a>
-        </li>
-        <li><a href="index3.html" class="block text-sm px-2 py-4 hover:bg-pink-500 transition duration-300">Album</a>
-        </li>
-        <li><a href="index4.html" class="block text-sm px-2 py-4 hover:bg-pink-500 transition duration-300">Our
-            Story</a>
-        </li>
-        <a href="login.html" class="block text-sm py-4 px-2 font-semibold hover:bg-pink-500 transition duration-300">
-          Log-in</a>
-
-      </ul>
-    </div>
-    <script>
-      const btn = document.querySelector("button.mobile-menu-button");
-      const menu = document.querySelector(".mobile-menu");
-
-      btn.addEventListener("click", () => {
-        menu.classList.toggle("hidden");
-      });
-    </script>
-  </nav>
-
-  <div class="w-full  bg-center bg-cover" style="background-image: url(img/banner\ -\ Copy.png);">
-    <div class="flex items-center justify-center w-full h-full bg-gray-900 bg-opacity-10 py-12">
-      <div class="text-center">
-        <div class="container px-4 mx-auto">
-          <div class="max-w-xl mx-auto text-center">
-            <h1 class="text-6xl text-white font-bold mt-0 mb-6">Wedding of </h1>
-            <h3 class="text-4xl text-white mb-4"> MIN YOONGI</h3>
-            <p class="text-white">DAN</p>
-            <h3 class="text-4xl text-white">SHIN HYERA</h3>
-
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
-
-
-    
-  <h2 class="text-center font-semibold text-2xl p-10 py-12">OUR MEMORIES</h2>
-
-  <div class="grid mx-15 justify-center lg:grid-cols-3 ">
-    <div class="max-w-xs mx-4 mb-2 rounded-lg shadow-lg">
-        <img class="w-full h-48" src="img/engagement.png" alt="product" />
-        <div class="px-6 py-4">
-            <h4 class="mb-3 text-xl font-semibold text-center tracking-tight text-gray-800">PREWEDDING</h4>
-        </div>
-    </div>
-    <div class="max-w-xs mx-4 mb-2 rounded-lg shadow-lg">
-        <img class="w-full h-48" src="img/prewed.png" alt="product" />
-        <div class="px-6 py-4">
-            <h4 class="mb-3 text-xl font-semibold text-center tracking-tight text-gray-800">ENGAGEMENT</h4>
-        </div>
-    </div>
-    <div class="max-w-xs mx-4 mb-2 rounded-lg shadow-lg">
-        <img class="w-full h-48" src="img/wedding.png" alt="product" />
-        <div class="px-6 py-4">
-            <h4 class="mb-3 text-xl font-semibold text-center tracking-tight text-gray-800">WEDDING</h4>
-        </div>
-    </div>
-</div>
-
-  
-
-  <div class="grid  justify-center grid-cols-2 gap-4">
-
-    <div class="col-span-4 px-13">
-      <div class=" w-full lg:max-w-8xl lg:flex ">
-
-
-        <div
-          class="h-80 mx-6 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
-          title="STORY">
-          <img src="img/story.png" alt="">
-        </div>
-        <div
-          class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-6 flex flex-col justify-between leading-normal">
-          <div class="mb-12">
-            <div class="text-gray-900 font-bold text-xl mb-2">YOONGI & HYERA</div>
-            <P>The love story begins here</P>
-            <p class="text-gray-700 py-5 text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Voluptatibus quia, Nonea! Maiores et perferendis eaque, exercitationem praesentium nihil.</p>
-
-          </div>
-
-
-
-          <div class="flex items-center">
-            <div class="text-sm">
-              <p class="text-gray-900 leading-none">-The blog</p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-    </div>
-    <!-- <div class="px-16 grid-cols-2 grid">
-      <img src="img/Line 3.png" alt="" class="py-16 px-10">
-
-      <span class="font-medium my-20">
-        <div class=" text-center pr-2">
-          <h1> THE</h1>
-          <p> JOURNAL</p>
-          <p>......</p>
-          <h1>visit our love story</h1>
-          <button class=" rounded-3xl py-2 px-1.5 bg-slate-400 ">Click here</button>
-
-        </div>
-      </span>
-
-
-
-
-    </div> -->
-  </div>
-
-
-
-  <section class="my-2 justify-center ">
-    <div class=" mx-auto ">
-      <div class="w-full bg-cover py-4 bg-white " >
-        <div class="sm:flex sm:items-center sm:justify-between px-20">
-          <a href="#" target="_blank" class="flex items-center mb-4 sm:mb-0">
-            <img src="img/1_1-removebg-preview.png" class=" h-18" alt="Flowbite Logo" />
-          </a>
-          <ul class="flex flex-wrap items-center mb-6 sm:mb-0">
-            <li>
-              <div class="px-2 pr-7">
-                <span class="inline-block px-2 py-1 text-sm font-semibold text-gray-700 mr-2 mb-1">
-                  <svg style="width:24px;height:24px" viewBox="0 0 24 24">
-                    <path fill="currentColor"
-                      d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" />
-                  </svg> </span>
-                <span class="inline-block px-2 py-1 text-sm font-semibold text-gray-700 mr-2 mb-1">
-                  <svg style="width:24px;height:24px" viewBox="0 0 24 24">
-                    <path fill="currentColor"
-                      d="M20,15.5C18.8,15.5 17.5,15.3 16.4,14.9C16.3,14.9 16.2,14.9 16.1,14.9C15.8,14.9 15.6,15 15.4,15.2L13.2,17.4C10.4,15.9 8,13.6 6.6,10.8L8.8,8.6C9.1,8.3 9.2,7.9 9,7.6C8.7,6.5 8.5,5.2 8.5,4C8.5,3.5 8,3 7.5,3H4C3.5,3 3,3.5 3,4C3,13.4 10.6,21 20,21C20.5,21 21,20.5 21,20V16.5C21,16 20.5,15.5 20,15.5M5,5H6.5C6.6,5.9 6.8,6.8 7,7.6L5.8,8.8C5.4,7.6 5.1,6.3 5,5M19,19C17.7,18.9 16.4,18.6 15.2,18.2L16.4,17C17.2,17.2 18.1,17.4 19,17.4V19Z" />
-                  </svg>
-                </span>
-                <span class="inline-block px-2 py-1 text-sm font-semibold text-gray-700 mr-2 mb-1 ">
-                  <svg style="width:24px;height:24px" viewBox="0 0 24 24">
-                    <path fill="currentColor"
-                      d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z" />
-                  </svg>
-                </span>
-              </div>
-            </li>
-            <li>
-              <a href="#" class="mr-4 text-sm text-white-500 hover:underline md:mr-6 dark:text-white-400">
-                <img src="img/Line 3.png" alt="">
-              </a>
-            </li>
-            <li>
-              <a href="#" class="mr-4 text-sm text-white-500 hover:underline md:mr-6 dark:text-white-400">
-                <p>ndcknscna, c,az adl </p>
-                <p>dlancladncladnlc</p>
-                Licensing
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-  </section>
-
-
-
-
-
+  <div class="hidden opacity-25 fixed inset-0 z-40 bg-black" id="modal-id-backdrop"></div>
+  <script type="text/javascript">
+    function toggleModal(modalID){
+      document.getElementById(modalID).classList.toggle("hidden");
+      document.getElementById(modalID + "-backdrop").classList.toggle("hidden");
+      document.getElementById(modalID).classList.toggle("flex");
+      document.getElementById(modalID + "-backdrop").classList.toggle("flex");
+    }
+  </script>
 
 </body>
 
